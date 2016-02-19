@@ -14,7 +14,9 @@
  *= require_self
  */
 div#messages{
+  background-color: white;
   border: 1px solid black;
+  box-shadow: 5px 5px 2px slategray;
   width: 50%;
   margin-left: 25%;
   padding-left: 1%;
@@ -22,4 +24,9 @@ div#messages{
 
 h1{
   text-align: center;
+}
+
+body {
+  background-color: ghostwhite;
+  font-family: sans-serif;
 }
