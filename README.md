@@ -2,17 +2,14 @@
 
 ##Team Members
 
-https://github.com/anfperez
-[Github](Angela Perez)
 
-https://github.com/HolzAndrew
-[Github](Andrew Holz)
+[Angela Perez](https://github.com/anfperez)
 
-https://github.com/Chimerus
-[Github](Jason Chan)
+[Andrew Holz](https://github.com/HolzAndrew)
 
-https://github.com/kyledavid1
-[Github](Kyle Stengline)
+[Jason Chan](https://github.com/Chimerus)
+
+[Kyle Stengline](https://github.com/kyledavid1)
 
 
 ## Developing a basic Chatroom app using Action Cable and Rails 5!
