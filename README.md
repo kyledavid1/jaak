@@ -30,22 +30,22 @@
 
 ``` gpg --verify rvm-installer.asc && bash rvm-installer stable ```
 
-```reload```
+``` reload ```
 
-```gem install nokogiri```
+``` gem install nokogiri ```
 
-```gem update --system```
+``` gem update --system ```
 
-```rvm install ruby-2.3.0```
+``` rvm install ruby-2.3.0 ```
 
-```rvm use ruby-2.3.0@rails5.0 --create```
+``` rvm use ruby-2.3.0@rails5.0 --create ```
 
-```gem install rails --pre```
+``` gem install rails --pre ```
 
 *You may or may not have to run the below*
-```bundle install```
+``` bundle install ```
 
-```rvm use ruby-2.3.0@rails5.0 ```
+``` rvm use ruby-2.3.0@rails5.0 ```
 
 
 #### Creating the App
