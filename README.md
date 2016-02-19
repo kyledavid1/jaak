@@ -14,4 +14,4 @@
 
 ## Developing a basic Chatroom app using Action Cable and Rails 5!
 
-(https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
+!(https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
