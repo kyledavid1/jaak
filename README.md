@@ -14,8 +14,6 @@
 
 ## Developing a basic Chatroom app using Action Cable and Rails 5!
 
-<<<<<<< HEAD
-
 Angela Part: 11 -16:30
 
 10:30 Make sure that your room_channel.rb file looks like this before continuing:
@@ -39,6 +37,6 @@ Now we are going to create a function known as a job. Go to models > message.rb 
 ![image_6](http://i.imgur.com/tC2M5e0.png)
 
 
-=======
+
 ![Chatroom](https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
->>>>>>> f797a3ed608750ab9bd0800fa987f81e60d1ef0d
+
