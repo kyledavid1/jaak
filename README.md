@@ -13,8 +13,9 @@
 
 ## Developing a basic Chatroom app using Action Cable and Rails 5!
 
-<<<<<<< HEAD
 ### Creating the App and Generating your files
+
+![Chatroom](https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
 
 #### Installing Rails 5
 * First you'll need to install Rails 5 in order for this to work. 
@@ -90,8 +91,6 @@ This generater generates two sides of Action Cable. The client side(speak)where 
 
 
 
-
-=======
 Angela Part: 11 -16:30
 
 10:30 Make sure that your room_channel.rb file looks like this before continuing:
@@ -113,9 +112,4 @@ Go back to room_channel.rb and change the code so that speak now creates new mes
 
 Now we are going to create a function known as a job. Go to models > message.rb and enter in the following code.
 ![image_6](http://i.imgur.com/tC2M5e0.png)
-
-
-
-![Chatroom](https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
->>>>>>> 1ec775f5d8b9615e930b7eb69deaad85aff04384
 
