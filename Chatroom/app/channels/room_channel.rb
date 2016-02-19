@@ -11,4 +11,6 @@ class RoomChannel < ApplicationCable::Channel
   def speak(data)
   	Message.create! content: data['message']
   end
+
+  
 end

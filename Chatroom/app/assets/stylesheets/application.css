@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+div#messages{
+  border: 1px solid black;
+  width: 50%;
+  margin-left: 25%;
+  padding-left: 1%;
+}
+
+h1{
+  text-align: center;
+}
