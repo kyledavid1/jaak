@@ -101,26 +101,39 @@ Speak is our user specified action
 15. before we move forward we need to turn on a few things that are commented out. There are two things:
 -in router, the mount ActionCable
 before:
+
 ![ActionCable off](http://i.imgur.com/AOo3dtB.png)
 after:
+
 ![ActionCable on](http://i.imgur.com/D0gmN6i.png)
 
 on client side - turn on that we want to create a consumer of this cable. Uncomment the last 2 lines in cable.coffee
+
 ![@app off](http://i.imgur.com/27wkZ6S.png)
+
 ![@app on](http://i.imgur.com/AYDbIeG.png)
+
 You may have noticed this is the same App.cable from the room subscription in room.coffee 
+
 ![app.room in room.coffee](http://i.imgur.com/43UFIwY.png)
 
 16. Now lets look at this in the browser (make sure to restart your server)
 Open the inspector to see the meta tags are now in the head.
-[Imgur](http://i.imgur.com/FJmIi8h.png)
+[image](http://i.imgur.com/FJmIi8h.png)
+
 In the console type "App.cable" to see the connection we have setup
-[Imgur](http://i.imgur.com/rrvO0zE.png)
+
+[image](http://i.imgur.com/rrvO0zE.png)
+
 Now type App.room.speak. We added this speak command and want to confirm it is being called.
-[Imgur](http://i.imgur.com/Nt56lG0.png)
+
+[image](http://i.imgur.com/Nt56lG0.png)
+
 17. Now lets make App.room.speak actually do something.
 Go back in room.coffee. Speak must take a parameter, lets do (message), and we need to pass that on to the server side. 
-[Imgur](http://i.imgur.com/w37JiE8.png)
+
+[image](http://i.imgur.com/w37JiE8.png)
+
 Perform calls an action on the server side channel and passes it a hash (message). The hash is automatically serialized with json
 
 18. This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
