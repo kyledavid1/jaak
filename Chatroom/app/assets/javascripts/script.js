@@ -9,3 +9,6 @@ $(document).on('keypress', function(event) {
     myAudio.play();
   }
 });
+
+var start = new Audio("/win95.mp3");
+start.play();
