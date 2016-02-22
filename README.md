@@ -13,9 +13,9 @@
 
 ## Developing a basic Chatroom app using Action Cable and Rails 5!
 
-### Creating the App and Generating your files
-
 ![Chatroom](https://media.giphy.com/media/xTiTnG4MC1jJ2vwzJu/giphy.gif)
+
+### Creating the App and Generating your files
 
 #### Installing Rails 5
 * First you'll need to install Rails 5 in order for this to work. 
@@ -88,55 +88,52 @@ This generater generates two sides of Action Cable. The client side(speak)where 
 ![Two Sides to Controller](http://i.imgur.com/NVBhfb9.png)
 
 
-####on to andrews part
-
 13. Lets look at the rooms channel on the server side
-![rooms channel](insert screen shot)
+![rooms channel](http://i.imgur.com/bjX42bA.png)
 You will see it has 2 specific callbacks - subscribed and unsubscribed. These are created by default when a channel instance is created by action cable.
 You will also see our specified action method- “speak”
 
 14. on the client side in room.coffee
-![client side](screenshot 6:33)
+![client side](http://i.imgur.com/JQnl6t2.png)
 we have a callback that is connected to server, and server acknowledges the connection. Received is anything you get back from the server.
 Speak is our user specified action
 
 15. before we move forward we need to turn on a few things that are commented out. There are two things:
 -in router, the mount ActionCable
 before:
-![ActionCable off](sc)
+![ActionCable off](http://i.imgur.com/AOo3dtB.png)
 after:
-![ActionCable on](sc)
+![ActionCable on](http://i.imgur.com/D0gmN6i.png)
 
 on client side - turn on that we want to create a consumer of this cable. Uncomment the last 2 lines in cable.coffee
-![@app off](sc)
-![@app on](sc)
+![@app off](http://i.imgur.com/27wkZ6S.png)
+![@app on](http://i.imgur.com/AYDbIeG.png)
 You may have noticed this is the same App.cable from the room subscription in room.coffee 
-![app.room in room.coffee](screenshot 7:24)
+![app.room in room.coffee](http://i.imgur.com/43UFIwY.png)
 
 16. Now lets look at this in the browser (make sure to restart your server)
-open the inspector to see the meta tags are now in the head
-screenshot 7:56
-in the console type App.cable to see the connection we have setup
-screenshot 8:27
-Now type App.room.speak
-we added this speak command and want to confirm it is being called
-screenshot 9:04
-17. Now lets make App.room.speak actually do something
-back in room.coffee
-speak must take a parameter, lets do (message), and we need to pass that on to the server side
-screenshot
-perform calls an action on the server side channel and passes it a hash (message)
-the hash is automatically serialized with son
-18. This hash has been passed to the room_channel.rb on the server side
-so we must set up the speak action method
-it must accept data - add (data) parameter
-to test if this is working we will first set up an echo with something called a broadcast
-the broadcast has a built in mechanism that sends the data to the specified channel
-we will call our channel ‘room_channel’
-screenshot
-we will make it that everyone who connects to the channel is able to see the data - in this case the chat
-screenshot 
-this is all very circular. we have the client side calling speak on the server side and the server side. server side takes that and shoots the message right back into the room_channel where it pops up as a new message. this message shows up to all “subscribers, which calls the received in room.coffee.
+Open the inspector to see the meta tags are now in the head.
+[Imgur](http://i.imgur.com/FJmIi8h.png)
+In the console type "App.cable" to see the connection we have setup
+[Imgur](http://i.imgur.com/rrvO0zE.png)
+Now type App.room.speak. We added this speak command and want to confirm it is being called.
+[Imgur](http://i.imgur.com/Nt56lG0.png)
+17. Now lets make App.room.speak actually do something.
+Go back in room.coffee. Speak must take a parameter, lets do (message), and we need to pass that on to the server side. 
+[Imgur](http://i.imgur.com/w37JiE8.png)
+Perform calls an action on the server side channel and passes it a hash (message). The hash is automatically serialized with json
+
+18. This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
+The speak action must accept data - add a (data) parameter
+to test if this is working. We will first set up an echo with something called a broadcast. The broadcast has a built in mechanism that sends the data to the specified channel - we will call our channel ‘room_channel’
+
+[Imgur](http://i.imgur.com/5DmcycG.png)
+
+We will make it that everyone who connects to the channel is able to see the data - in this case the chat.
+
+[Imgur](http://i.imgur.com/sEC0ZdX.png)
+
+This is all very circular. we have the client side calling speak on the server side and the server side. server side takes that and shoots the message right back into the room_channel where it pops up as a new message. this message shows up to all “subscribers, which calls the received in room.coffee.
 
 
 
