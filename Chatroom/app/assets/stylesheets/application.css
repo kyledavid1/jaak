@@ -74,3 +74,11 @@ body {
   z-index: 42;
   border: none;
 }
+
+#sound {
+  position: fixed;
+  top: 380px;
+  left: 600px;
+  height: 35px;
+  width: 50px;
+}
