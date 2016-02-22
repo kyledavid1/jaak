@@ -117,7 +117,7 @@ You may have noticed this is the same App.cable from the room subscription in ro
 
 ![app.room in room.coffee](http://i.imgur.com/43UFIwY.png)
 
-16. Now lets look at this in the browser (make sure to restart your server)
+## 16. Now lets look at this in the browser (make sure to restart your server)
 Open the inspector to see the meta tags are now in the head.
 ![image](http://i.imgur.com/FJmIi8h.png)
 
@@ -129,14 +129,14 @@ Now type App.room.speak. We added this speak command and want to confirm it is b
 
 ![image](http://i.imgur.com/Nt56lG0.png)
 
-17. Now lets make App.room.speak actually do something.
+##17. Now lets make App.room.speak actually do something.
 Go back in room.coffee. Speak must take a parameter, lets do (message), and we need to pass that on to the server side. 
 
 ![image](http://i.imgur.com/w37JiE8.png)
 
 Perform calls an action on the server side channel and passes it a hash (message). The hash is automatically serialized with json
 
-18. (eighteen) This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
+## 18 This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
 The speak action must accept data - add a (data) parameter
 to test if this is working. We will first set up an echo with something called a broadcast. The broadcast has a built in mechanism that sends the data to the specified channel - we will call our channel ‘room_channel’
 
