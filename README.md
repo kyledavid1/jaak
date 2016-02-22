@@ -136,7 +136,7 @@ Go back in room.coffee. Speak must take a parameter, lets do (message), and we n
 
 Perform calls an action on the server side channel and passes it a hash (message). The hash is automatically serialized with json
 
-18. This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
+18. (eighteen) This hash has been passed to the room_channel.rb on the server side, so we must set up the speak action method.
 The speak action must accept data - add a (data) parameter
 to test if this is working. We will first set up an echo with something called a broadcast. The broadcast has a built in mechanism that sends the data to the specified channel - we will call our channel ‘room_channel’
 
