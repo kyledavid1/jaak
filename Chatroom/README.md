@@ -1,6 +1,6 @@
 # jaak
 
-## Developing a basic Chatroom app using Action Cable and Rails 5!
+## Developing a basic Chatroom app using Action Cable and Rails 5! ActionCable is for dealing wit WebSockets. Hi-throughput, live data, streaming. Other ways - Polling (easy, but not scalable), long-polling(hold connection open, bad if frequent updates) server-sent events(requires persistent connection, update from server, but only puma/thing and no IE). Web Sockets - stateful connection (no good if broken), - no data frames (much less metadata) -Full-duplex so no need to complete request before response, mostly game useful. BUT less pings, but lots of persistent connections.
 
 Jason: 16:30 - end
 
