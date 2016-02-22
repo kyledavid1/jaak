@@ -119,20 +119,20 @@ You may have noticed this is the same App.cable from the room subscription in ro
 
 16. Now lets look at this in the browser (make sure to restart your server)
 Open the inspector to see the meta tags are now in the head.
-[image](http://i.imgur.com/FJmIi8h.png)
+![image](http://i.imgur.com/FJmIi8h.png)
 
 In the console type "App.cable" to see the connection we have setup
 
-[image](http://i.imgur.com/rrvO0zE.png)
+![image](http://i.imgur.com/rrvO0zE.png)
 
 Now type App.room.speak. We added this speak command and want to confirm it is being called.
 
-[image](http://i.imgur.com/Nt56lG0.png)
+![image](http://i.imgur.com/Nt56lG0.png)
 
 17. Now lets make App.room.speak actually do something.
 Go back in room.coffee. Speak must take a parameter, lets do (message), and we need to pass that on to the server side. 
 
-[image](http://i.imgur.com/w37JiE8.png)
+![image](http://i.imgur.com/w37JiE8.png)
 
 Perform calls an action on the server side channel and passes it a hash (message). The hash is automatically serialized with json
 
@@ -140,11 +140,11 @@ Perform calls an action on the server side channel and passes it a hash (message
 The speak action must accept data - add a (data) parameter
 to test if this is working. We will first set up an echo with something called a broadcast. The broadcast has a built in mechanism that sends the data to the specified channel - we will call our channel ‘room_channel’
 
-[Imgur](http://i.imgur.com/5DmcycG.png)
+![Imgur](http://i.imgur.com/5DmcycG.png)
 
 We will make it that everyone who connects to the channel is able to see the data - in this case the chat.
 
-[Imgur](http://i.imgur.com/sEC0ZdX.png)
+![Imgur](http://i.imgur.com/sEC0ZdX.png)
 
 This is all very circular. we have the client side calling speak on the server side and the server side. server side takes that and shoots the message right back into the room_channel where it pops up as a new message. this message shows up to all “subscribers, which calls the received in room.coffee.
 
