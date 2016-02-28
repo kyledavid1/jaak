@@ -180,6 +180,8 @@ In message.rb, if you use just the  “after_create” hook then job runs before
 ![after_create_commit](http://i.imgur.com/5vaGDYC.png)
 This will send the MessageBroadcastJob to ActionCable.server.broadcast.
 
+We are going to generate a job. in terminal type ```rails generate job MessageBroadcast```
+
 Go to message_broadcast_job.rb. Perform will render the message in a room. What is really interesting is that render is OUTSIDE the controller in the class method itself! So can render partials without being in scope of controller!
 ![render](http://i.imgur.com/ApmbVkF.png)
 
